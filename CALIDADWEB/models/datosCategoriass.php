@@ -19,3 +19,4 @@ while ($row = $result->fetch_assoc()) {
 }
 
 echo json_encode($categorias, JSON_UNESCAPED_UNICODE);
+/* hola  */
