@@ -15,7 +15,7 @@ class Conexion
             die("El error de Conexión es: " . $e->getMessage());
         }
     }
-}
+}/* chao */
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 //Esta conexion2 es para el formato de verificiacion y dotacion de BPM
