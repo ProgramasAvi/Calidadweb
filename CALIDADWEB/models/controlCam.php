@@ -16,3 +16,4 @@ foreach ($data as $dat) {
 }
 $jsonstring = json_encode($json);
 echo $jsonstring;
+/*pruebas sistemas */
