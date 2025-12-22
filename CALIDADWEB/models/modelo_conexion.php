@@ -35,4 +35,4 @@ class Conexion2
             die("El error de Conexión es: " . $e->getMessage());
         }
     }
-}
+}/* hola */
