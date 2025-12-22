@@ -1,4 +1,4 @@
-<?php
+<?php /*prueba de sistemas con git hub hub*/
 require_once "../models/BD.php";
 require_once "../controller/validarusuario.php";
 include "../prueba/connect.php";
