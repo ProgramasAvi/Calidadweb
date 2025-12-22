@@ -1,0 +1,1868 @@
+$(document).ready(function () {
+    $(".btnConChillVerifi").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblconChillVerifi').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 1 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "ID" },
+                { "data": "FECHA" },
+                { "data": "HORA" },
+                { "data": "C1" },
+                { "data": "C2" },
+                { "data": "C3" },
+                { "data": "C4" },
+                { "data": "C5" },
+                { "data": "CONCEN_ACIDPERA" },
+                { "data": "TEMP_AGUA" },
+                { "data": "OBSERVACIONES" },
+                { "data": "RESPONS_OBSER" }
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+
+    $(".btnConChiller").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblConChiller').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 2 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "ID" },
+                { "data": "FECHA" },
+                { "data": "HORA" },
+                { "data": "TIPO_AVE" },
+                { "data": "C1" },
+                { "data": "C2" },
+                { "data": "C3" },
+                { "data": "C4" },
+                { "data": "C5" },
+                { "data": "C6" },
+                { "data": "C7" },
+                { "data": "C8" },
+                { "data": "C9" },
+                { "data": "C10" },
+                { "data": "C11" },
+                { "data": "C12" },
+                { "data": "C13" },
+                { "data": "C14" },
+                { "data": "C15" },
+                { "data": "TEMP_PROM" },
+                { "data": "PORCENT_CUMPLI" },
+                { "data": "PH" },
+                { "data": "TEMP_PRECHILL" },
+                { "data": "REGISCLORO" },
+                { "data": "ACIDO_PPM" },
+                { "data": "TEMP_CHILL" },
+                { "data": "RESPONS" },
+                { "data": "HORAMUES" },
+                { "data": "CODIGO" },
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+
+    $(".btnVerifiMari").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblVerifiMari').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 3 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "horaVerifi" },
+                { "data": "areaVeri" },
+                { "data": "observaHalla" },
+                { "data": "despresProduc" },
+                { "data": "despresTempe" },
+                { "data": "marinaProduc" },
+                { "data": "marinaTemp" },
+                { "data": "salmueTemp" },
+                { "data": "ambienTemp" },
+                { "data": "trazabiliLote" },
+                { "data": "trazabiliFV" },
+                { "data": "supervisor" },
+                { "data": "coordCalidad" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+
+    $(".btnReporMari").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblReporMari').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 4 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "hora" },
+                { "data": "area" },
+                { "data": "despresProduc" },
+                { "data": "despresTempe" },
+                { "data": "marinaProduc" },
+                { "data": "marinaTemp" },
+                { "data": "salmueTemp" },
+                { "data": "ambienTemp" },
+                { "data": "trazabiliLote" },
+                { "data": "trazabiliFV" },
+                { "data": "observacion" },
+                { "data": "accionCorrectiva" },
+                { "data": "responsable" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+
+    $(".btnVeriConProcesos").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblVeriConProcesos').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 5 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "horaVerifi" },
+                { "data": "areaVeri" },
+                { "data": "observaHalla" },
+                { "data": "muestraProducto" },
+                { "data": "muestraTemp1" },
+                { "data": "muestraTem2" },
+                { "data": "muestraTem3" },
+                { "data": "muestraTem4" },
+                { "data": "muestraTem5" },
+                { "data": "ambienTemp" },
+                { "data": "trazabiliLote" },
+                { "data": "trazabiliFV" },
+                { "data": "supervisor" },
+                { "data": "coordCalidad" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnReporConProceso").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblReporConProceso').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 6 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "hora" },
+                { "data": "area" },
+                { "data": "muestraProducto" },
+                { "data": "muestraTemp1" },
+                { "data": "muestraTem2" },
+                { "data": "muestraTem3" },
+                { "data": "muestraTem4" },
+                { "data": "muestraTem5" },
+                { "data": "ambienTemp" },
+                { "data": "trazabiliLote" },
+                { "data": "trazabiliFV" },
+                { "data": "observacion" },
+                { "data": "accionCorrectiva" },
+                { "data": "responsable" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnInspecAntemortem").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblInspecAntemortem').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 7 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "ID" },
+                { "data": "fecha" },
+                { "data": "lotProduc" },
+                { "data": "cantAves" },
+                { "data": "pollo" },
+                { "data": "pavo" },
+                { "data": "gallina" },
+                { "data": "viaje" },
+                { "data": "granja" },
+                { "data": "sexo" },
+                { "data": "edad" },
+                { "data": "avesCadena" },
+                { "data": "tiempoAyuno" },
+                { "data": "plumasErizadas" },
+                { "data": "inflamacionCabezaOjos" },
+                { "data": "secrecionNarizOjos" },
+                { "data": "edemaBarbilla" },
+                { "data": "sinRespEstimulo" },
+                { "data": "estornudos" },
+                { "data": "diarreaAcumulacionFecal" },
+                { "data": "lesionPiel" },
+                { "data": "heridaSupurante" },
+                { "data": "deshidratacion" },
+                { "data": "sintomasNerviosos" },
+                { "data": "golpesHematomas" },
+                { "data": "huesosEngrosados" },
+                { "data": "avesAsfixiadas" },
+                { "data": "observaciones" },
+                { "data": "accionesCorrectivas" },
+                { "data": "realiza" },
+                { "data": "aprueba" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnInspecPostmortem").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblInspecPostmortem').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 8 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "ID" },
+                { "data": "fecha" },
+                { "data": "cantAves" },
+                { "data": "pollo" },
+                { "data": "pavo" },
+                { "data": "gallina" },
+                { "data": "viaje" },
+                { "data": "absesos" },
+                { "data": "aerosaculitis" },
+                { "data": "ascitis" },
+                { "data": "dermatitis" },
+                { "data": "procesoInflamatorio" },
+                { "data": "tumor" },
+                { "data": "contaminacion" },
+                { "data": "cianosis" },
+                { "data": "caquexia" },
+                { "data": "contusionFractura" },
+                { "data": "ictericia" },
+                { "data": "marek" },
+                { "data": "sobreEscaldado" },
+                { "data": "olor" },
+                { "data": "osteomielitis" },
+                { "data": "septicemia" },
+                { "data": "polloMalSangrado" },
+                { "data": "totalAveDecomisada" },
+                { "data": "observaciones" },
+                { "data": "accionesCorrectivas" },
+
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnRegFrente").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblRegFrente').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 9 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "frentViaje" },
+                { "data": "frentSexo" },
+                { "data": "frentGranja" },
+                { "data": "frentNAvesGranja" },
+                { "data": "frentNAvesPlant" },
+                { "data": "dgranRLace" },
+                { "data": "dgranPerHema" },
+                { "data": "dgranAHema" },
+                { "data": "dgranAFract" },
+                { "data": "dgranALuxa" },
+                { "data": "dgranPechHema" },
+                { "data": "dgranPechGranu" },
+                { "data": "dgranOGranuPlant" },
+                { "data": "dgranOHemaDor" },
+                { "data": "dgranOAlimen	" },
+                { "data": "dgranOHiGraso" },
+                { "data": "dproPerHema" },
+                { "data": "dproPerFract" },
+                { "data": "dproAHema" },
+                { "data": "dproAPuntaRoja" },
+                { "data": "dproAFract" },
+                { "data": "dproALuxa" },
+                { "data": "dproPechHema" },
+                { "data": "dproOPlumCanal" },
+                { "data": "dproORuptIntes" },
+                { "data": "dproOContaBili" },
+                { "data": "dproOPoCampPig" },
+                { "data": "dproOPoCampPar" },
+                { "data": "dproOPoMalSang" },
+                { "data": "dproOSobrEscal" },
+
+
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnRegReves").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblRegReves').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 10 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "rvsCuadricula" },
+                { "data": "dcarRLace" },
+                { "data": "dcarPerHema" },
+                { "data": "dcarPerFract" },
+                { "data": "dcarAHemat" },
+                { "data": "dcarAFract" },
+                { "data": "dcarPechHema" },
+                { "data": "vproTEscal1" },
+                { "data": "vproTEscal2" },
+                { "data": "vproTEscalPatas" },
+                { "data": "vproVoltAtur" },
+                { "data": "vproAmpAtur" },
+                { "data": "vproFrecAtur	" },
+                { "data": "vproTiemEscal" },
+                { "data": "vproTiemSangra	" },
+                { "data": "vproTiemPoVisce" },
+                { "data": "vproVelCade" },
+                { "data": "rvsAsfixiados" },
+                { "data": "rvsObservacion" },
+                { "data": "rvsAccionCorrect" },
+                { "data": "rvsRealiza" },
+                { "data": "rvsAprueba" },
+
+
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnConPesaje").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblConPesaje').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 11 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fechaProd" },
+                { "data": "referencia" },
+                { "data": "bachesProd" },
+                { "data": "consecutivo" },
+                { "data": "nomMPC" },
+                { "data": "loteIntMPC" },
+                { "data": "pesoMPC" },
+                { "data": "nombreMPNC" },
+                { "data": "loteIntMPNC" },
+                { "data": "pesoFormu" },
+                { "data": "pesoEncon" },
+                { "data": "observ" },
+                { "data": "respon" },
+                { "data": "horaI" },
+                { "data": "horaFn" },
+                { "data": "resPesaMPC" },
+                { "data": "resPesaMPNC" },
+                { "data": "verifSuperv" },
+                { "data": "observaciones" },
+
+
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnConMezclado").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblConMezclado').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 12 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "loteInt" },
+                { "data": "horaI" },
+                { "data": "horaFn" },
+                { "data": "numBache" },
+                { "data": "timeMezcla" },
+                { "data": "textura" },
+                { "data": "color" },
+                { "data": "responsable" },
+                { "data": "verificacion" },
+                { "data": "observacion" }
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnConEmbutido").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblConEmbutido').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 13 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "loteInt" },
+                { "data": "horaI" },
+                { "data": "horaFn" },
+                { "data": "numBache" },
+                { "data": "referencia" },
+                { "data": "lotePV" },
+                { "data": "cantidad" },
+                { "data": "pesoCrudo" },
+                { "data": "longitud" },
+                { "data": "diametro" },
+                { "data": "responsable" },
+                { "data": "verificacion" },
+                { "data": "observacion" },
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnConAhumado").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblConAhumado').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 14 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "loteInt" },
+                { "data": "horaI" },
+                { "data": "horaFn" },
+                { "data": "hornoV" },
+                { "data": "hornoCT" },
+                { "data": "tanque" },
+                { "data": "controlTNP" },
+                { "data": "responsable" },
+                { "data": "timeCoccion" },
+                { "data": "verifiTNP" },
+                { "data": "responsable1" },
+                { "data": "observacion" },
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+
+    $(".btnConEmpaque").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblConEmpaque').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 15 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "loteInt" },
+                { "data": "T1" },
+                { "data": "H1" },
+                { "data": "R1" },
+                { "data": "T2" },
+                { "data": "H2" },
+                { "data": "R2" },
+                { "data": "T3" },
+                { "data": "H3" },
+                { "data": "R3" },
+                { "data": "T4" },
+                { "data": "H4" },
+                { "data": "R4" },
+                { "data": "T5" },
+                { "data": "H5" },
+                { "data": "R5" },
+                { "data": "T6" },
+                { "data": "H6" },
+                { "data": "R6" },
+                { "data": "color" },
+                { "data": "olor" },
+                { "data": "sabor" },
+                { "data": "textura" },
+                { "data": "responsable" },
+                { "data": "observacion" },
+                { "data": "producto" },
+                { "data": "lote" },
+                { "data": "FV" },
+                { "data": "cantidad" },
+                { "data": "matEmpaque" },
+                { "data": "lotePV" },
+                { "data": "horaI" },
+                { "data": "horaFn" },
+                { "data": "responsable1" },
+                { "data": "verifica" },
+                { "data": "fechaPeso" },
+                { "data": "peso1" },
+                { "data": "peso2" },
+                { "data": "peso3" },
+                { "data": "peso4" },
+                { "data": "peso5" },
+                { "data": "peso6" },
+                { "data": "peso7" },
+                { "data": "peso8" },
+                { "data": "peso9" },
+                { "data": "peso10" },
+                { "data": "verifiCalidad" },
+                { "data": "jefeProd" },
+                { "data": "jefeCalidad" },
+                { "data": "observaciones" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnFormDevoluciones").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblFormDevoluciones').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 16 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "producto" },
+                { "data": "documento" },
+                { "data": "cliente" },
+                { "data": "cantidad" },
+                { "data": "unidad" },
+                { "data": "lote" },
+                { "data": "fv" },
+                { "data": "temperatura" },
+                { "data": "destino" },
+                { "data": "causa" },
+                { "data": "placa" },
+                { "data": "ruta" },
+                { "data": "vendedor" },
+                { "data": "calidad" },
+                { "data": "despachos" },
+                { "data": "observacion" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnConTPD").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblConTPD').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 17 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "hora" },
+                { "data": "tempAmbiente" },
+                { "data": "destino" },
+                { "data": "placas" },
+                { "data": "producto1" },
+                { "data": "lote1" },
+                { "data": "vencimiento1" },
+                { "data": "temperatura1" },
+                { "data": "producto2" },
+                { "data": "lote2" },
+                { "data": "vencimiento2" },
+                { "data": "temperatura2" },
+                { "data": "producto3" },
+                { "data": "lote3" },
+                { "data": "vencimiento3" },
+                { "data": "temperatura3" },
+                { "data": "producto4" },
+                { "data": "lote4" },
+                { "data": "vencimiento4" },
+                { "data": "temperatura4" },
+                { "data": "producto5" },
+                { "data": "lote5" },
+                { "data": "vencimiento5" },
+                { "data": "temperatura5" },
+                { "data": "producto6" },
+                { "data": "lote6" },
+                { "data": "vencimiento6" },
+                { "data": "temperatura6" },
+                { "data": "producto7" },
+                { "data": "lote7" },
+                { "data": "vencimiento7" },
+                { "data": "temperatura7" },
+                { "data": "producto8" },
+                { "data": "lote8" },
+                { "data": "vencimiento8" },
+                { "data": "temperatura8" },
+                { "data": "producto9" },
+                { "data": "lote9" },
+                { "data": "vencimiento9" },
+                { "data": "temperatura9" },
+                { "data": "producto10" },
+                { "data": "lote10" },
+                { "data": "vencimiento10" },
+                { "data": "temperatura10" },
+                { "data": "realizo" },
+                { "data": "observacion" },
+                { "data": "correctivo" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnVeriConChillVisc").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblVeriConChillVisc').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 18 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "hora" },
+                { "data": "hm1" },
+                { "data": "hm2" },
+                { "data": "hm3" },
+                { "data": "hcloro" },
+                { "data": "htemp" },
+                { "data": "mm1" },
+                { "data": "mm2" },
+                { "data": "mm3" },
+                { "data": "mcloro" },
+                { "data": "mtemp" },
+                { "data": "pm1" },
+                { "data": "pm2" },
+                { "data": "pm3" },
+                { "data": "pcloro" },
+                { "data": "ptemp" },
+                { "data": "cm1" },
+                { "data": "cm2" },
+                { "data": "cm3" },
+                { "data": "ccloro" },
+                { "data": "ctemp" },
+                { "data": "observacion" },
+                { "data": "reponsable" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnConChillVisc").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblConChillVisc').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 19 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "hora" },
+                { "data": "tipoAve" },
+                { "data": "responsable" },
+                { "data": "hm1" },
+                { "data": "hm2" },
+                { "data": "hm3" },
+                { "data": "hm4" },
+                { "data": "hm5" },
+                { "data": "hcloro" },
+                { "data": "htemp" },
+                { "data": "mm1" },
+                { "data": "mm2" },
+                { "data": "mm3" },
+                { "data": "mm4" },
+                { "data": "mm5" },
+                { "data": "mcloro" },
+                { "data": "mtemp" },
+                { "data": "pm1" },
+                { "data": "pm2" },
+                { "data": "pm3" },
+                { "data": "pm4" },
+                { "data": "pm5" },
+                { "data": "pcloro" },
+                { "data": "ptemp" },
+                { "data": "cm1" },
+                { "data": "cm2" },
+                { "data": "cm3" },
+                { "data": "cm4" },
+                { "data": "cm5" },
+                { "data": "ccloro" },
+                { "data": "ctemp" },
+                { "data": "porcentaje" },
+                { "data": "muestreo" },
+                { "data": "codigo" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopePlataforma").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopePlataforma').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 20 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeEvisc").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeEvisc').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 21 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeEmpaque").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeEmpaque').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 22 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeEnfria").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeEnfria').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 23 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeDesprese").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeDesprese').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 24 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeFileteo").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeFileteo').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 25 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopePavo").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopePavo').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 26 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopePost").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopePost').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 27 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeHielo").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeHielo').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 28 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeSalmuera").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeSalmuera').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 29 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeAlimentacion").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeAlimentacion').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 30 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeCanastilla").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeCanastilla').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 31 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeLavanderia").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeLavanderia').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 32 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "superficie" },
+                { "data": "novedad" },
+                { "data": "observacion" },
+                { "data": "cumplimiento" },
+                { "data": "cTotal" },
+                { "data": "calidad" },
+                { "data": "correccion" },
+                { "data": "respon_invima" },
+                { "data": "firm_invima" },
+
+
+            ],
+
+            columnDefs:
+                [{
+                    "targets": 10,
+                    "data": 'firm_invima',
+                    "render": function (data, type, row, meta) {
+                        return '<img src="' + data + '"  width="150"/>';
+                    }
+                }],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+    $(".btnPreopeVerifi").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblPreopeVerifi').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 33 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "fecha" },
+                { "data": "ptoMuestreo" },
+                { "data": "hora" },
+                { "data": "cloro" },
+                { "data": "desinf" },
+                { "data": "esteriliza" },
+
+
+            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+	
+	
+	
+	    $(".btnFrenteBPM").click(function (e) {
+        e.preventDefault();
+        swal({
+            title: "Cargando Tabla",
+            icon: "success",
+            buttons: false,
+            timer: 800,
+        });
+        $('#tblFrenteBPM').DataTable({
+            "ajax": {
+                "url": "../models/controlTablas.php",
+                "type": "POST",
+                "data": { opcion: 34 },
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "nombre" },
+                { "data": "cedula" },
+                { "data": "cargo" },
+                { "data": "ccosto" },
+                { "data": "descripcion" },
+                { "data": "verificacion" },
+                { "data": "cumplimiento" },
+                { "data": "fecHora" },
+                { "data": "responsable" },
+                { "data": "aprueba" },
+                { "data": "aprueba" },
+                            ],
+            "autoWidth": false,
+            dom: 'Bfrtip',
+            buttons: [{
+                extend: 'pageLength',
+                className: 'btnn btn-warning'
+            }, {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                sheetName: 'Exported data',
+                text: '<i class="fa-lg fa-solid fa-file-excel"></i> GENERAR EXCEL',
+                className: 'btnn btn-success'
+            }]
+        });
+    });
+
+});

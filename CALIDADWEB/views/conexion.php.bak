@@ -1,0 +1,13 @@
+<?php
+$host = "localhost";
+$user ="SANMARINO";
+$pw ="sanmarino2021*";
+$bd = "devoluciones";
+
+$conexion = mysqli_connect($host, $user, $pw, $bd);
+$mysqli = new mysqli("localhost", "SANMARINO", "sanmarino2021*", "devoluciones");
+if ($mysqli->connect_errno) {
+    printf("Falló la conexión: %s\n", $mysqli->connect_error);
+    exit();
+}
+?>

@@ -1,0 +1,35 @@
+{
+  "semi": true,
+  "singleQuote": false,
+  "printWidth": 500,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.php",
+      "options": {
+        "tabWidth": 2,
+        "printWidth": 1000,
+        "parser": "php"
+      }
+    },
+    {
+      "files": ["*.html", "*.css", "*.js"],
+      "options": {
+        "tabWidth": 2,
+        "printWidth": 500
+      }
+    }
+  ],
+  "htmlWhitespaceSensitivity": "ignore",
+  "bracketSameLine": true,
+  
+  "plugins": [
+    "@prettier/plugin-php",
+    "prettier-plugin-organize-attributes"
+  ],
+  "attributeSort": "ASC",
+  "attributeNewLine": "preserve"
+
+
+}
+

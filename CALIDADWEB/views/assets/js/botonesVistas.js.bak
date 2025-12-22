@@ -1,0 +1,446 @@
+function controlPccChiller() {
+    var q = document.getElementById('controlPccChiller').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-S-CCI-37-CONTROL DE PCC EN CHILLER DE CANAL';
+    $('#controlCb,#controlCa,#controlCz,#controlCc,#controlCd,#controlCe,#controlCf,#controlCg,#controlCh,#controlCi,#controlCj,#controlCk,#controlCl,#controlCm,#controlCn,#controlCñ,#tempPromedio,#porcenCumplimiento,#registroPh,#registroT,#prechiCloro,#registroPPM,#registroTChiller,#pcchillerHoMuestreo,#chicanCodigo').attr("required", true);
+    var b = document.getElementById("controlEnviar").setAttribute("name", "controlReporte");
+    function cerrarcontrolPccChiller() {
+        var w = document.getElementById('controlPccChiller').style.display = 'none';
+        $('#controlCb,#controlCa,#controlCz,#controlCc,#controlCd,#controlCe,#controlCf,#controlCg,#controlCh,#controlCi,#controlCj,#controlCk,#controlCl,#controlCm,#controlCn,#controlCñ,#tempPromedio,#porcenCumplimiento,#registroPh,#registroT,#prechiCloro,#registroPPM,#registroTChiller,#pcchillerHoMuestreo,#chicanCodigo').attr("required", false);
+        document.getElementById("porcenCumplimiento").style.fontWeight = "400";
+        document.getElementById("porcenCumplimiento").style.backgroundColor = "#e8ecef";
+    }
+    var r = document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolPccChiller, false);
+}
+function inspeccionVeterinaria() {
+    document.getElementById('inspeccionVeterinaria').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-S-CCI-14-INSPECCION VETERINARIA';
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formInspVetAntemor");
+    function cerrarinspeccionVeterinaria() {
+        document.getElementById('inspeccionVeterinaria').style.display = 'none';
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarinspeccionVeterinaria, false);
+}
+function enviarAnteMorte() {
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formInspVetAntemor");
+}
+function enviarPostMorte() {
+    var b = document.getElementById("controlEnviar").setAttribute("name", "formInspVetPostmor");
+}
+function lesionesAsfixias() {
+    document.getElementById('lesionesAsfixias').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-S-CCI-13-CLASIFICACION DE DEFECTOS DE CANAL - EVISCERACION';
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formLesAsfFren");
+    function cerrarlesionesAsfixias() {
+        document.getElementById('lesionesAsfixias').style.display = 'none';
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarlesionesAsfixias, false);
+}
+function sendFromFrente() {
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formLesAsfFren");
+}
+function sendFormReves() {
+    var b = document.getElementById("controlEnviar").setAttribute("name", "formLesAsfReves");
+}
+function reporteNecropsia() {
+    document.getElementById('reporteNecropsia').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'REPORTE DE NECROPSIA';
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formReporteNecropsia");
+    function cerrarreporteNecropsia() {
+        document.getElementById('reporteNecropsia').style.display = 'none';
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarreporteNecropsia, false);
+}
+function controlChillverific() {
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formConChillVerif");// AGREGE ,#controlCo,#controlCp
+    $('#controlCb,#controlCa,#controlCz,#controlCc,#controlCd,#controlCe,#controlCf,#controlCg,#controlCh,#controlCi,#controlCj,#controlCk,#controlCl,#controlCm,#controlCn,#controlCñ,#tempPromedio,#porcenCumplimiento,#registroPh,#registroT,#prechiCloro,#registroPPM,#registroTChiller,#pcchillerHoMuestreo,#chicanCodigo').attr("required", false);
+    /* activar botones de la verificacion del control del chiller */
+    $('#chillConHRegis,#chillConVC1,#chillConVC2,#chillConVC3,#chillConVC4,#chillConVC5,#chillConVC6,#chillConVC7,#chillConVC8,#chillConVC9,#chillConVC10,#chillConVC11,#chillConVC12,#chillConVC13,#chillConVC14,#chillConVC15,#chillConVC16,#chillConVC17,#chicanAciPer,#chicanTempAgua,#chillConVObser,#chillConVResObs').attr("required", true);
+} function controlChillverificSal() {
+    var l = document.getElementById("controlEnviar").setAttribute("name", "controlReporte");
+    $('#controlCb,#controlCa,#controlCz,#controlCc,#controlCd,#controlCe,#controlCf,#controlCg,#controlCh,#controlCi,#controlCj,#controlCk,#controlCl,#controlCm,#controlCn,#controlCñ,#tempPromedio,#porcenCumplimiento,#registroPh,#registroT,#prechiCloro,#registroPPM,#registroTChiller,#pcchillerHoMuestreo,#chicanCodigo').attr("required", true);
+    /* activar botones de la verificacion del control del chiller */
+    $('#chillConHRegis,#chillConVC1,#chillConVC2,#chillConVC3,#chillConVC4,#chillConVC5,#chillConVC6,#chillConVC7,#chillConVC8,#chillConVC9,#chillConVC10,#chillConVC11,#chillConVC12,#chillConVC13,#chillConVC14,#chillConVC15,#chillConVC16,#chillConVC17,#chicanAciPer,#chicanTempAgua,#chillConVObser,#chillConVResObs').attr("required", false);
+}
+function btnAdvert1() {
+    var q = document.getElementById("registroPPM").value;
+    if (q < 11) {
+        document.getElementById("registroPPM").style.backgroundColor = "red";
+        document.getElementById("registroPPM").style.fontWeight = "800";
+        var cho3 = document.getElementById('chicanCodigo').value;
+        document.getElementById('chicanCodigo').value = cho3 + ' CHO3 ';
+        swal("ADVERTENCIA", "EL VALOR DEL ACIDO PERACETICO SE ENCUENTRA POR DEBAJO DE LOS LIMITES ESTABLECIDOS, POR FAVOR REALIZAR LA ACCION CORRECTIVA", "error");
+    } else {
+        if (q > 23) {
+            document.getElementById("registroPPM").style.backgroundColor = "red";
+            document.getElementById("registroPPM").style.fontWeight = "800";
+            var cho4 = document.getElementById('chicanCodigo').value;
+            document.getElementById('chicanCodigo').value = cho4 + ' CHO4 ';
+            swal("ADVERTENCIA", "EL VALOR DEL ACIDO PERACETICO SE ENCUENTRA POR ENCIMA DE LOS LIMITES ESTABLECIDOS, POR FAVOR REALIZAR LA ACCION CORRECTIVA", "error");
+        } else {
+            document.getElementById("registroPPM").style.fontWeight = "400";
+            document.getElementById("registroPPM").style.backgroundColor = "#e8ecef";
+        }
+    }
+}
+function btnAdvert2() {
+    var q1 = document.getElementById("registroTChiller").value;
+    if (q1 > 2) {
+        document.getElementById("registroTChiller").style.backgroundColor = "red";
+        document.getElementById("registroTChiller").style.fontWeight = "800";
+        var cho2 = document.getElementById('chicanCodigo').value;
+        document.getElementById('chicanCodigo').value = cho2 + ' CHO2 ';
+        swal("ADVERTENCIA", "EL VALOR DE LA TEMPERATURA DEL AGUA DE ENFRIAMIENTO DE CHILLER SE ENCUENTRA FUERA DE LOS LIMITES ESTABLECIDOS, POR FAVOR REALIZAR LA ACCION CORRECTIVA", "error");
+    } else {
+        document.getElementById("registroTChiller").style.fontWeight = "400";
+        document.getElementById("registroTChiller").style.backgroundColor = "#e8ecef";
+    }
+}
+function btnAdvert3() {
+    var q2 = document.getElementById("porcenCumplimiento").style.backgroundColor;
+    if (q2 == "red") {
+        var cho1 = document.getElementById('chicanCodigo').value;
+        console.log(cho1);
+        document.getElementById('chicanCodigo').value = cho1 + ' CHO1 ';
+        swal("ADVERTENCIA", "EL VALOR DEL PORCENTAJE DE CUMPLIMIENTO SE ENCUENTRA FUERA DE LOS LIMITES ESTABLECIDOS, POR FAVOR REALIZAR LA ACCION CORRECTIVA", "error");
+    }
+}
+function VI01() {
+    var q2 = document.getElementById("cumplimientoEvisce").style.backgroundColor;
+    if (q2 == "red") {
+        var vi01 = document.getElementById('pccEvisCodigo').value;
+        console.log(vi01);
+        document.getElementById('pccEvisCodigo').value = vi01 + ' VIO1 ';
+        swal("ADVERTENCIA", "SE HA GENERADO UNA ACCION CORRECTIVA", "error");
+    }
+}
+function VI0304() {
+    var hcloro = document.getElementById("HCloroPPM").value;
+    var mcloro = document.getElementById("MCloroPPM").value;
+    var pcloro = document.getElementById("PCloroPPM").value;
+    var ccloro = document.getElementById("CCloroPPM").value;
+    var chcloro = document.getElementById("HCloroPPM").style.backgroundColor;
+    var cmcloro = document.getElementById("MCloroPPM").style.backgroundColor;
+    var cpcloro = document.getElementById("PCloroPPM").style.backgroundColor;
+    var cccloro = document.getElementById("CCloroPPM").style.backgroundColor;
+    if (chcloro == "red" || cmcloro == "red" || cpcloro == "red" || cccloro == "red") {
+        if (hcloro < 3 || mcloro < 3 || pcloro < 3 || ccloro < 3) {
+            var vi03 = document.getElementById('pccEvisCodigo').value;
+            console.log(vi03);
+            document.getElementById('pccEvisCodigo').value = vi03 + ' VIO3 ';
+            swal("ADVERTENCIA", "SE TIENE EN CUENTA ACCION CORRECTIVA", "error");
+        }
+        if (hcloro > 5 || mcloro > 5 || pcloro > 5 || ccloro > 5) {
+            var vi04 = document.getElementById('pccEvisCodigo').value;
+            console.log(vi04);
+            document.getElementById('pccEvisCodigo').value = vi04 + ' VIO4 ';
+            swal("ADVERTENCIA", "SE HA GENERADO UNA ACCION CORRECTIVA ACCION CORRECTIVA", "error");
+        }
+    }
+}
+function VI02() {
+    var htemp = document.getElementById("HTemperaturaC").value;
+    var mtemp = document.getElementById("MTemperaturaC").value;
+    var ptemp = document.getElementById("PTemperaturaC").value;
+    var ctemp = document.getElementById("CTemperaturaC").value;
+    if (htemp > 2 || mtemp > 2 || ptemp > 2 || ctemp > 2) {
+        var vi02 = document.getElementById('pccEvisCodigo').value;
+        console.log(vi02);
+        document.getElementById('pccEvisCodigo').value = vi02 + ' VIO2 ';
+        swal("ADVERTENCIA", "SE TIENE EN CUENTA ACCION CORRECTIVA", "error");
+    }
+}
+function controlMariAdoba() {
+    document.getElementById('controlMariAdoba').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-E-CCI-11-CONTROL MARINADO Y ADOBADO';
+    $('#cMariHorRegis,#cMariArea,#cMariDespreProduc,#cMariDespreTem,#cMariAdoProduc,#cMariAdoTem, #cMariSalmuTem,#cMariAmbieTem,#cMariTrazaLote,#cMariTrazaFV,#cMariRespons').attr("required", true);
+    $('#cMariHoraVeri,#cMariAreaVeri, #cMariObserHallaz, #cMariVDesprProdu, #cMariVDesprTemp,#cMariVDesprTemp1, #cMariVDesprTemp2, #cMariVDesprTemp3, #cMariVDesprTemp4, #cMariVDesprTemp5, #cMariVDesprTemp6, #cMariVDesprTemp7, #cMariVDesprTemp8, #cMariVDesprTemp9,#cMariVDesprTemp10, #cMariVDesprTemp11, #cMariVDesprTemp12, #cMariVDesprTemp13,#cMariVDesprTemp14,#cMariVDesprTemp15,#cMariVDesprTemp16, #cMariAdoVProduc, #cMariVAdoTemp,#cMariVSalmuTemp,#cMariVSalmuTemp1,#cMariVSalmuTemp2, #cMariVAmbTemp, #cMariVTrazaLote, #cMariVTrazaFV, #cMariSupervi, #cMariCoordCali',).attr("required", false);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formcontrolMariAdoba");
+    function cerrarcontrolMariAdoba() {
+        document.getElementById('controlMariAdoba').style.display = 'none';
+        $('#cMariHorRegis,#cMariArea,#cMariDespreProduc,#cMariDespreTem,#cMariAdoProduc,#cMariAdoTem,#cMariSalmuTem,#cMariAmbieTem,#cMariTrazaLote,#cMariTrazaFV,#cMariRespons').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolMariAdoba, false);
+}
+function formConMariVerifi() {
+    document.getElementById('controlMariAdoba').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-E-CTR-32-CONTROL MARINADO Y ADOBADO';
+    $('#cMariHorRegis,#cMariArea,#cMariDespreProduc,#cMariDespreTem,#cMariAdoProduc,#cMariAdoTem,#cMariSalmuTem,#cMariAmbieTem,#cMariTrazaLote,#cMariTrazaFV,#cMariRespons').attr("required", false);
+    $('#cMariHoraVeri,#cMariAreaVeri, #cMariObserHallaz, #cMariVDesprProdu, #cMariVDesprTemp, #cMariAdoVProduc, #cMariVAdoTemp, #cMariVSalmuTemp, #cMariVAmbTemp, #cMariVTrazaLote, #cMariVTrazaFV, #cMariSupervi, #cMariCoordCali').attr("required", true);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formConMariVerifi");
+    function cerrarcontrolMariAdoba() {
+        document.getElementById('controlMariAdoba').style.display = 'none';
+        $('#cMariHoraVeri,#cMariAreaVeri, #cMariObserHallaz, #cMariVDesprProdu, #cMariVDesprTemp, #cMariAdoVProduc, #cMariVAdoTemp, #cMariVSalmuTemp, #cMariVAmbTemp, #cMariVTrazaLote, #cMariVTrazaFV, #cMariSupervi, #cMariCoordCali').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolMariAdoba, false);
+}
+function controlProcesos() {
+    document.getElementById('VistacontrolProceso').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-S-CCI-19-CONTROL DE PROCESO';
+    $('#cProcVHora,#cProcVArea,#cProcVObHalla,#cProcVMuesProd,#cProcVMuestTem1,#cProcVMuesTem2,#cProcVMuesTem3,#cProcVMuesTem4,#cProcVMuesTem5,#cProcVAmbiTem,#cProcVLote,#cProcVFv,#cProcVSuperv,#cProcVCoordCali').attr("required", false);
+    $('#cProsHoraR,#cProcArea,#cProcMuesProd,#cProcMuesTem1,#cProcMuesTem2,#cProcMuesTem3,#cProcMuesTem4,#cProcMuesTem5,#cProcAmbiTemp,#cProcLote,#cProcFv,#cProcRespon').attr("required", true);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formcontrolProcesos");
+    function cerrarcontrolProceso() {
+        document.getElementById('VistacontrolProceso').style.display = 'none';
+        $('#cProsHoraR,#cProcArea,#cProcMuesProd,#cProcMuesTem1,#cProcMuesTem2,#cProcMuesTem3,#cProcMuesTem4,#cProcMuesTem5,#cProcAmbiTemp,#cProcLote,#cProcFv,#cProcRespon').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+function controlVerifiProcesos() {
+    document.getElementById('VistacontrolProceso').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-E-CTR-16-CONTROL DE PROCESO';
+    $('#cProcVHora,#cProcVArea,#cProcVObHalla,#cProcVMuesProd,#cProcVMuestTem1,#cProcVMuesTem2,#cProcVMuesTem3,#cProcVMuesTem4,#cProcVMuesTem5,#cProcVAmbiTem,#cProcVLote,#cProcVFv,#cProcVSuperv,#cProcVCoordCali').attr("required", true);
+    $('#cProsHoraR,#cProcArea,#cProcMuesProd,#cProcMuesTem1,#cProcMuesTem2,#cProcMuesTem3,#cProcMuesTem4,#cProcMuesTem5,#cProcAmbiTemp,#cProcLote,#cProcFv,#cProcRespon').attr("required", false);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formcontrolVerifiProcesos");
+    function cerrarcontrolProceso() {
+        document.getElementById('VistacontrolProceso').style.display = 'none';
+        $('#cProsHoraR,#cProcArea,#cProcMuesProd,#cProcMuesTem1,#cProcMuesTem2,#cProcMuesTem3,#cProcMuesTem4,#cProcMuesTem5,#cProcAmbiTemp,#cProcLote,#cProcFv,#cProcRespon').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+function controlProduccion() {
+    document.getElementById('controlProduccion').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = '03PD-F01-CONTROL DE PRODUCCION';
+    /* 
+        $('#cProcVHora,#cProcVObHalla,#cProcVMuesProd,#cProcVMuestTem1,#cProcVMuesTem2,#cProcVMuesTem3,#cProcVMuesTem4,#cProcVMuesTem5,#cProcVAmbiTem,#cProcVLote,#cProcVFv,#cProcVSuperv,#cProcVCoordCali').attr("required", true);
+        $('#cProsHoraR,#cProcArea,#cProcMuesProd,#cProcMuesTem1,#cProcMuesTem2,#cProcMuesTem3,#cProcMuesTem4,#cProcMuesTem5,#cProcAmbiTemp,#cProcLote,#cProcFv,#cProcRespon').attr("required", false);
+     */
+    function cerrarcontrolProduccion() {
+        document.getElementById('controlProduccion').style.display = 'none';
+        $('#pesaBache,#pesaLotIntMPC,#pesaPeso,#pesaNomMPNC,#pesaLotIntMPNC,#pesaPesoForm,#pesaPesoEncon,#pesaResponMPNC,#pesaHoraI,#pesaHoraFn,#responPesaMPC,#pesaResponsaMPNC,#pesaVeriSuper').attr("required", false);
+        $('#mezLotInt,#mezHoraI,#mezHoraFn,#mezBache,#tiempMezcl,#mezTextura,#mezColor,#mezRespon,#mezVeri').attr("required", false);
+        $('#embuLotInt,#embuHoraI,#embuHoraFn,#embuBache,#embuRef,#embuLotPV,#embuCant,#embuPesoCrudo,#embuLong,#embuDiam,#embuRespon,#embuVerifi').attr("required", false);
+        $('#coAhuLotInt,#coAhuBache,#coAhuHoraI,#coAhuHoraFn,#coAhuHornoV,#coAhuHornoCT,#coAhuTanque,#coAhuTNuProCon,#coAhuResponCon,#coAhuTiCoccion,#coAhuTNuProVeri,#coAhuResponVeri').attr("required", false);
+        $('#empLotInt,#empTemp1,#empHora1,#empResp1,#empTemp2,#empHora2,#empResp2,#empResponsa1,#empProduc,#empLote,#empFV,#empCant,#empMatEmpa,#empLotPV,#empResponsa2,#empVerifi,#empFechaPeso,#empPeso1,#empPeso2,#empPeso3,#empPeso4 ,#empVeriCali,#empAprobJProdu,#empAprobJCali').attr("required", false);
+        /*  $('#cProsHoraR,#cProcArea,#cProcMuesProd,#cProcMuesTem1,#cProcMuesTem2,#cProcMuesTem3,#cProcMuesTem4,#cProcMuesTem5,#cProcAmbiTemp,#cProcLote,#cProcFv,#cProcRespon').attr("required", false); */
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProduccion, false);
+}
+function btnPesaje() {
+    var b = document.getElementById("controlEnviar").setAttribute("name", "formProducPesaje");
+    $('#pesaBache,#pesaLotIntMPC,#pesaPeso,#pesaNomMPNC,#pesaLotIntMPNC,#pesaPesoForm,#pesaPesoEncon,#pesaResponMPNC,#pesaHoraI,#pesaHoraFn,#responPesaMPC,#pesaResponsaMPNC,#pesaVeriSuper').attr("required", true);
+    /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    $('#mezLotInt,#mezHoraI,#mezHoraFn,#mezBache,#tiempMezcl,#mezTextura,#mezColor,#mezRespon,#mezVeri').attr("required", false);
+    $('#embuLotInt,#embuHoraI,#embuHoraFn,#embuBache,#embuRef,#embuLotPV,#embuCant,#embuPesoCrudo,#embuLong,#embuDiam,#embuRespon,#embuVerifi').attr("required", false);
+    $('#coAhuLotInt,#coAhuBache,#coAhuHoraI,#coAhuHoraFn,#coAhuHornoV,#coAhuHornoCT,#coAhuTanque,#coAhuTNuProCon,#coAhuResponCon,#coAhuTiCoccion,#coAhuTNuProVeri,#coAhuResponVeri').attr("required", false);
+    $('#empLotInt,#empTemp1,#empHora1,#empResp1,#empTemp2,#empHora2,#empResp2,#empResponsa1,#empProduc,#empLote,#empFV,#empCant,#empMatEmpa,#empLotPV,#empResponsa2,#empVerifi,#empFechaPeso,#empPeso1,#empPeso2,#empPeso3,#empPeso4 ,#empVeriCali,#empAprobJProdu,#empAprobJCali').attr("required", false);
+}
+function btnMezclado() {
+    var b = document.getElementById("controlEnviar").setAttribute("name", "formProducMezclado");
+    $('#mezLotInt,#mezHoraI,#mezHoraFn,#mezBache,#tiempMezcl,#mezTextura,#mezColor,#mezRespon,#mezVeri').attr("required", true);
+    /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    $('#pesaBache,#pesaLotIntMPC,#pesaPeso,#pesaNomMPNC,#pesaLotIntMPNC,#pesaPesoForm,#pesaPesoEncon,#pesaResponMPNC,#pesaHoraI,#pesaHoraFn,#responPesaMPC,#pesaResponsaMPNC,#pesaVeriSuper').attr("required", false);
+    $('#embuLotInt,#embuHoraI,#embuHoraFn,#embuBache,#embuRef,#embuLotPV,#embuCant,#embuPesoCrudo,#embuLong,#embuDiam,#embuRespon,#embuVerifi').attr("required", false);
+    $('#coAhuLotInt,#coAhuBache,#coAhuHoraI,#coAhuHoraFn,#coAhuHornoV,#coAhuHornoCT,#coAhuTanque,#coAhuTNuProCon,#coAhuResponCon,#coAhuTiCoccion,#coAhuTNuProVeri,#coAhuResponVeri').attr("required", false);
+    $('#empLotInt,#empTemp1,#empHora1,#empResp1,#empTemp2,#empHora2,#empResp2,#empResponsa1,#empProduc,#empLote,#empFV,#empCant,#empMatEmpa,#empLotPV,#empResponsa2,#empVerifi,#empFechaPeso,#empPeso1,#empPeso2,#empPeso3,#empPeso4 ,#empVeriCali,#empAprobJProdu,#empAprobJCali').attr("required", false);
+}
+function btnEmbutido() {
+    var b = document.getElementById("controlEnviar").setAttribute("name", "formProducEmbutido");
+    $('#embuLotInt,#embuHoraI,#embuHoraFn,#embuBache,#embuRef,#embuLotPV,#embuCant,#embuPesoCrudo,#embuLong,#embuDiam,#embuRespon,#embuVerifi').attr("required", true);
+    /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    $('#pesaBache,#pesaLotIntMPC,#pesaPeso,#pesaNomMPNC,#pesaLotIntMPNC,#pesaPesoForm,#pesaPesoEncon,#pesaResponMPNC,#pesaHoraI,#pesaHoraFn,#responPesaMPC,#pesaResponsaMPNC,#pesaVeriSuper').attr("required", false);
+    $('#mezLotInt,#mezHoraI,#mezHoraFn,#mezBache,#tiempMezcl,#mezTextura,#mezColor,#mezRespon,#mezVeri').attr("required", false);
+    $('#coAhuLotInt,#coAhuBache,#coAhuHoraI,#coAhuHoraFn,#coAhuHornoV,#coAhuHornoCT,#coAhuTanque,#coAhuTNuProCon,#coAhuResponCon,#coAhuTiCoccion,#coAhuTNuProVeri,#coAhuResponVeri').attr("required", false);
+    $('#empLotInt,#empTemp1,#empHora1,#empResp1,#empTemp2,#empHora2,#empResp2,#empResponsa1,#empProduc,#empLote,#empFV,#empCant,#empMatEmpa,#empLotPV,#empResponsa2,#empVerifi,#empFechaPeso,#empPeso1,#empPeso2,#empPeso3,#empPeso4 ,#empVeriCali,#empAprobJProdu,#empAprobJCali').attr("required", false);
+}
+function btnCoAhu() {
+    var b = document.getElementById("controlEnviar").setAttribute("name", "formProducCoAhu");
+    $('#coAhuLotInt,#coAhuBache,#coAhuHoraI,#coAhuHoraFn,#coAhuHornoV,#coAhuHornoCT,#coAhuTanque,#coAhuTNuProCon,#coAhuResponCon,#coAhuTiCoccion,#coAhuTNuProVeri,#coAhuResponVeri').attr("required", true);
+    /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    $('#embuLotInt,#embuHoraI,#embuHoraFn,#embuBache,#embuRef,#embuLotPV,#embuCant,#embuPesoCrudo,#embuLong,#embuDiam,#embuRespon,#embuVerifi').attr("required", false);
+    $('#pesaBache,#pesaLotIntMPC,#pesaPeso,#pesaNomMPNC,#pesaLotIntMPNC,#pesaPesoForm,#pesaPesoEncon,#pesaResponMPNC,#pesaHoraI,#pesaHoraFn,#responPesaMPC,#pesaResponsaMPNC,#pesaVeriSuper').attr("required", false);
+    $('#mezLotInt,#mezHoraI,#mezHoraFn,#mezBache,#tiempMezcl,#mezTextura,#mezColor,#mezRespon,#mezVeri').attr("required", false);
+    $('#empLotInt,#empTemp1,#empHora1,#empResp1,#empTemp2,#empHora2,#empResp2,#empResponsa1,#empProduc,#empLote,#empFV,#empCant,#empMatEmpa,#empLotPV,#empResponsa2,#empVerifi,#empFechaPeso,#empPeso1,#empPeso2,#empPeso3,#empPeso4 ,#empVeriCali,#empAprobJProdu,#empAprobJCali').attr("required", false);
+}
+function btnEmpaque() {
+    var b = document.getElementById("controlEnviar").setAttribute("name", "formProducEmpaque");
+    $('#empLotInt,#empTemp1,#empHora1,#empResp1,#empTemp2,#empHora2,#empResp2,#empResponsa1,#empProduc,#empLote,#empFV,#empCant,#empMatEmpa,#empLotPV,#empResponsa2,#empVerifi,#empFechaPeso,#empPeso1,#empPeso2,#empPeso3,#empPeso4 ,#empVeriCali,#empAprobJProdu,#empAprobJCali').attr("required", true);
+    /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    $('#coAhuLotInt,#coAhuBache,#coAhuHoraI,#coAhuHoraFn,#coAhuHornoV,#coAhuHornoCT,#coAhuTanque,#coAhuTNuProCon,#coAhuResponCon,#coAhuTiCoccion,#coAhuTNuProVeri,#coAhuResponVeri').attr("required", false);
+    $('#embuLotInt,#embuHoraI,#embuHoraFn,#embuBache,#embuRef,#embuLotPV,#embuCant,#embuPesoCrudo,#embuLong,#embuDiam,#embuRespon,#embuVerifi').attr("required", false);
+    $('#pesaBache,#pesaLotIntMPC,#pesaPeso,#pesaNomMPNC,#pesaLotIntMPNC,#pesaPesoForm,#pesaPesoEncon,#pesaResponMPNC,#pesaHoraI,#pesaHoraFn,#responPesaMPC,#pesaResponsaMPNC,#pesaVeriSuper').attr("required", false);
+    $('#mezLotInt,#mezHoraI,#mezHoraFn,#mezBache,#tiempMezcl,#mezTextura,#mezColor,#mezRespon,#mezVeri').attr("required", false);
+}
+function devoluciones() {
+    document.getElementById('vistaDevoluciones').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-S-CCI-57-DEVOLUCIONES';
+    $('#devolReco,#devolProduc,#devolDocum,#devolClient,#devolCant,#devolUnidad,#devolLot,#devolFv,#devolTemp,#devolDestino,#devolCausa,#devolPlaca,#devolRuta,#devolRespCali,#devolRespDesp,#vendedor').attr("required", true);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formDevoluciones");
+    function cerrarcontrolProceso() {
+        document.getElementById('vistaDevoluciones').style.display = 'none';
+        $('#devolReco,#devolProduc,#devolDocum,#devolClient,#devolCant,#devolUnidad,#devolLot,#devolFv,#devolTemp,#devolDestino,#devolCausa,#devolPlaca,#devolRuta,#devolRespCali,#devolRespDesp,#vendedor').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+function ContTempDespa() {
+    document.getElementById('vistaTempDespa').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-E-CTR-29-CONTROL TEMPERATURA PRODUCTOS DESPACHADOS';
+    $('#tpdHora,#tpdTempAmb,#tpdDestino,#tpdPlacas,#tempDesPro1,#tpdLote1,#tpdVenci1,#tpdTemp1,#tempDesPro2,#tpdLote2,#tpdVenci2,#tpdTemp2,#tempDesPro3,#tpdLote3,#tpdVenci3,#tpdTemp3,#tempDesPro4,#tpdLote4,#tpdVenci4,#tpdTemp4,#tempDesPro5,#tpdLote5,#tpdVenci5,#tpdTemp5,#tpdRealizo').attr("required", true);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formTempDespa");
+    function cerrarcontrolProceso() {
+        document.getElementById('vistaTempDespa').style.display = 'none';
+        $('#tpdHora,#tpdTempAmb,#tpdDestino,#tpdPlacas,#tempDesPro1,#tpdLote1,#tpdVenci1,#tpdTemp1,#tempDesPro2,#tpdLote2,#tpdVenci2,#tpdTemp2,#tempDesPro3,#tpdLote3,#tpdVenci3,#tpdTemp3,#tempDesPro4,#tpdLote4,#tpdVenci4,#tpdTemp4,#tempDesPro5,#tpdLote5,#tpdVenci5,#tpdTemp5,#tpdRealizo').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+function pccVisceras() {
+    document.getElementById('pccVisceras').style.display = 'block';
+    document.getElementById('pccEvisCodigo').value = ' ';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-E-CTR-74-CONTROL DE PCC EN CHILLER DE VISCERAS';
+    $('#pccViscHora,#pccViscRespo,#HM01,#HM02,#HM03,#HM04,#HM05,#HCloroPPM,#HTemperaturaC,#MM01,#MM02,#MM03,#MM04,#MM05,#MCloroPPM,#MTemperaturaC,#PM01,#PM02,#PM03,#PM04,#PM05,#PCloroPPM,#PTemperaturaC,#CM01,#CM02,#CM03,#CM04,#CM05,#CCloroPPM,#CTemperaturaC,#pccEviscMuestreo,#pccEvisCodigo').attr("required", true);
+    $('#evisVerifiHora,#VHM1,#VHM2,#VHM3,#VHCloroPPM,#VHTemperaturaC,#VMM1,#VMM2,#VMM3,#VMCloroPPM,#VMTemperaturaC,#VPM1,#VPM2,#VPM3,#VPCloroPPM,#VPTemperaturaC,#VCM1,#VCM2,#VCM3,#VCCloroPPM,#VCTemperaturaC,#pccEviscResposanble').attr("required", false);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formPccEviscera");
+    function cerrarcontrolProceso() {
+        document.getElementById('pccVisceras').style.display = 'none';
+        $('#pccViscHora,#pccViscRespo,#HM01,#HM02,#HM03,#HM04,#HM05,#HCloroPPM,#HTemperaturaC,#MM01,#MM02,#MM03,#MM04,#MM05,#MCloroPPM,#MTemperaturaC,#PM01,#PM02,#PM03,#PM04,#PM05,#PCloroPPM,#PTemperaturaC,#CM01,#CM02,#CM03,#CM04,#CM05,#CCloroPPM,#CTemperaturaC,#pccEviscMuestreo,#pccEvisCodigo').attr("required", false);
+        $('#evisVerifiHora,#VHM1,#VHM2,#VHM3,#VHCloroPPM,#VHTemperaturaC,#VMM1,#VMM2,#VMM3,#VMCloroPPM,#VMTemperaturaC,#VPM1,#VPM2,#VPM3,#VPCloroPPM,#VPTemperaturaC,#VCM1,#VCM2,#VCM3,#VCCloroPPM,#VCTemperaturaC,#pccEviscResposanble').attr("required", false);
+        document.getElementById("cumplimientoEvisce").style.fontWeight = "400";
+        document.getElementById("cumplimientoEvisce").style.backgroundColor = "#e8ecef";
+        document.getElementById("HCloroPPM").style.fontWeight = "400";
+        document.getElementById("HCloroPPM").style.backgroundColor = "#e8ecef";
+        document.getElementById('MCloroPPM').style.fontWeight = '400';
+        document.getElementById('MCloroPPM').style.backgroundColor = '#e8ecef';
+        document.getElementById('PCloroPPM').style.fontWeight = '400';
+        document.getElementById('PCloroPPM').style.backgroundColor = '#e8ecef';
+        document.getElementById('CCloroPPM').style.fontWeight = '400';
+        document.getElementById('CCloroPPM').style.backgroundColor = '#e8ecef';
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+function pccViscerasVerifi() {
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formPccEviscVerifi");
+    $('#pccViscHora,#pccViscRespo,#HM01,#HM02,#HM03,#HM04,#HM05,#HCloroPPM,#HTemperaturaC,#MM01,#MM02,#MM03,#MM04,#MM05,#MCloroPPM,#MTemperaturaC,#PM01,#PM02,#PM03,#PM04,#PM05,#PCloroPPM,#PTemperaturaC,#CM01,#CM02,#CM03,#CM04,#CM05,#CCloroPPM,#CTemperaturaC,#pccEviscMuestreo,#pccEvisCodigo').attr("required", false);
+    $('#evisVerifiHora,#VHM1,#VHM2,#VHM3,#VHCloroPPM,#VHTemperaturaC,#VMM1,#VMM2,#VMM3,#VMCloroPPM,#VMTemperaturaC,#VPM1,#VPM2,#VPM3,#VPCloroPPM,#VPTemperaturaC,#VCM1,#VCM2,#VCM3,#VCCloroPPM,#VCTemperaturaC,#pccEviscResposanble').attr("required", true);
+}
+
+function preOperativo() {
+    document.getElementById('preOperativo').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-E-CTR-52-INSPECCION PRE OPERATIVO PLANTA DE SACRIFICIO';
+    document.getElementById("controlEnviar").setAttribute("name", "formPreOperativo");
+    $('#calidadPreOpe,#correctivoPreOpe,#invimaPreOpe').attr("required", true);
+    $('#muestreoPreOpe1,#muestreoPreOpe2,#muestreoPreOpe3,#muestreoPreOpe4,#horaPreOpe1,#horaPreOpe2,#horaPreOpe3,#horaPreOpe4,#cloroPreOpe1,#cloroPreOpe2,#cloroPreOpe3,#cloroPreOpe4').attr("required", false);
+    
+    
+    function cerrarcontrolProceso() {
+        document.getElementById('preOperativo').style.display = 'none';
+        $('#calidadPreOpe,#correctivoPreOpe,#invimaPreOpe').attr("required", false);
+        $('#controlEnviar').off()
+        
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+
+    
+}
+
+function sendFormVariablesProc() {
+    $('#controlEnviar').off()
+    document.getElementById("controlEnviar").setAttribute("name", "formVariablesProc");
+    $('#calidadPreOpe,#correctivoPreOpe,#invimaPreOpe').attr("required", false);
+
+    $('#muestreoPreOpe1,#muestreoPreOpe2,#muestreoPreOpe3,#muestreoPreOpe4,#horaPreOpe1,#horaPreOpe2,#horaPreOpe3,#horaPreOpe4,#cloroPreOpe1,#cloroPreOpe2,#cloroPreOpe3,#cloroPreOpe4').attr("required", true);
+
+    function cerrarcontrolProceso() {
+        document.getElementById('preOperativo').style.display = 'none';
+        $('#muestreoPreOpe1,#muestreoPreOpe2,#muestreoPreOpe3,#muestreoPreOpe4,#horaPreOpe1,#horaPreOpe2,#horaPreOpe3,#horaPreOpe4,#cloroPreOpe1,#cloroPreOpe2,#cloroPreOpe3,#cloroPreOpe4').attr("required", false);
+        $('#controlEnviar').off()
+        
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+
+function verificaBPM() {
+    document.getElementById('verficaBPM').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-S-CCI-11-VERIFICACION DE DOTACION Y BPM';
+    /* $('#devolProduc,#devolDocum,#devolClient,#devolCant,#devolUnidad,#devolLot,#devolFv,#devolTemp,#devolDestino,#devolCausa,#devolPlaca,#devolRuta,#devolRespCali,#devolRespDesp,#vendedor').attr("required", true); */
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formVeriFrenteBPM");
+    function cerrarcontrolProceso() {
+        document.getElementById('verficaBPM').style.display = 'none';
+        /* $('#devolProduc,#devolDocum,#devolClient,#devolCant,#devolUnidad,#devolLot,#devolFv,#devolTemp,#devolDestino,#devolCausa,#devolPlaca,#devolRuta,#devolRespCali,#devolRespDesp,#vendedor').attr("required", false); */
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+
+function ControlEmpaque() {
+    document.getElementById('ControlEmpaque').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-E-CTR-122-CONTROL-MATERIAL-DE-EMPAQUE';
+    $('#ControlEmpaFecha,#ControlEmpaProduct,#ControlEmpaTermi,#ControlEmpaFechaV,#ControlEmpaCanti,#ControlEmpaRegis,#ControlEmpaMate,#ControlEmpaLibe,#ControlEmpaObser,#ContorlEmpaRespo,#ControlEmpaVerificado').attr("required", true);
+    document.getElementById("controlEnviar").setAttribute("name", "formEmpaque");
+    
+    function cerrarcontrolProceso() {
+        document.getElementById('ControlEmpaque').style.display = 'none';
+        $('#ControlEmpaFecha,#ControlEmpaProduct,#ControlEmpaTermi,#ControlEmpaFechaV,#ControlEmpaCanti,#ControlEmpaRegis,#ControlEmpaMate,#ControlEmpaLibe,#ControlEmpaObser,#ContorlEmpaRespo,#ControlEmpaVerificado').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+
+function ControlCloro() {
+    document.getElementById('controlCloro').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-S-CCI-21-CONTROL CLORO RESIDUAL AGUA POTABLE';
+    $('#ControlCloroFecha,#ControlCloroHora,#ControlCloroMuestra,#ControlCloroCloro,#ControlCloroPH,#ControlCloroCorrectivas,#ControlCloroVerificado').attr("required", true);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formControlCloro");
+    function cerrarcontrolProceso() {
+        document.getElementById('controlCloro').style.display = 'none';
+        $('#ControlCloroFecha,#ControlCloroHora,#ControlCloroMuestra,#ControlCloroCloro,#ControlCloroPH,#ControlCloroCorrectivas,#ControlCloroVerificado').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+
+
+// se le hace comentario para ocultar su funcionalidad, ya que se pidieron modificaciones
+// function AuditoriaProceso() {
+//     document.getElementById('auditoriaProceso').style.display = 'block';
+//     var m = document.getElementById("cabeceraGeneral");
+//     m.innerHTML = 'FOR-E-CTR-35-AUDITORIA DE PROCESO';
+//     $('#auditariaMes, #auditoriaAnio, #auditoriaArea, #auditoriaResponsable, #auditoriaAspecto, #cumplimientoAuditoria').attr("required", true);
+//     var l = document.getElementById("controlEnviar").setAttribute("name", "formAuditoriaProceso");
+//     function cerrarcontrolProceso() {
+//         document.getElementById('auditoriaProceso').style.display = 'none';
+//         $('#auditariaMes, #auditoriaAnio, #auditoriaArea, #auditoriaResponsable, #auditoriaAspecto, #cumplimientoAuditoria').attr("required", false);
+//     }
+//     document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+// }
+
+function AuditoriaProceso() {
+    document.getElementById('auditoriaProceso').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'FOR-S-CCI-27-AUDITORIA DE PROCESO';
+    $('#auditariaMes, #auditoriaAnio, #auditoriaArea, #auditoriaResponsable, #auditoriaAspecto, #cumplimientoAuditoria').attr("required", true);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "formAuditoriaProceso");
+    function cerrarcontrolProceso() {
+        document.getElementById('auditoriaProceso').style.display = 'none';
+        $('#auditariaMes, #auditoriaAnio, #auditoriaArea, #auditoriaResponsable, #auditoriaAspecto, #cumplimientoAuditoria').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+}
+
+
+
+/* function xlsConProC() {
+    document.getElementById('VistacontrolProceso').style.display = 'block';
+    var m = document.getElementById("cabeceraGeneral");
+    m.innerHTML = 'CONTROL DE PROCESO';
+    $('#cProcVHora,#cProcVObHalla,#cProcVMuesProd,#cProcVMuestTem1,#cProcVMuesTem2,#cProcVMuesTem3,#cProcVMuesTem4,#cProcVMuesTem5,#cProcVAmbiTem,#cProcVLote,#cProcVFv,#cProcVSuperv,#cProcVCoordCali').attr("required", false);
+    $('#cProsHoraR,#cProcArea,#cProcMuesProd,#cProcMuesTem1,#cProcMuesTem2,#cProcMuesTem3,#cProcMuesTem4,#cProcMuesTem5,#cProcAmbiTemp,#cProcLote,#cProcFv,#cProcRespon').attr("required", false);
+    $('#inputcontrol,#inputcontrol2').attr("required", true);
+    var l = document.getElementById("controlEnviar").setAttribute("name", "btnEnXLS");
+    function cerrarcontrolProceso() {
+        document.getElementById('VistacontrolProceso').style.display = 'none';
+        $('#inputcontrol,#inputcontrol2').attr("required", false);
+    }
+    document.getElementById('cancelarGeneral').addEventListener("click", cerrarcontrolProceso, false);
+} */
