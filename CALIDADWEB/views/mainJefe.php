@@ -14252,14 +14252,14 @@ include "conexion.php";
                                                 <option value="No">NO</option>
                                               </select>
                                             </div>
-                                           <!--  <div class="col-md-6" id="contenedorAreacorreccion" style="margin-top:10px">
+                                            <div class="col-md-6" id="contenedorAreacorreccion" style="margin-top:10px">
                                               <label>Se corrige la condición locativa al momento del reporte? </label><br>
                                               <select class="form-select" id="areasiono" name="areasiono">
                                                 <option value="" selected hidden>Selecciona</option>
                                                 <option value="Si">SI</option>
                                                 <option value="No">NO</option>
                                               </select>
-                                            </div> -->
+                                            </div>
 
                                            
                                             <div class="row">
